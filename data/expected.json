@@ -1,0 +1,9 @@
+{
+  "titleName": "Login",
+  "readonly": {
+    "h4Title": "Readonly",
+    "int": "0",
+    "decimal": "0.00",
+    "h4ReorderTitle": "You can drag the rows up or down to re-arrange the order of the items"
+  }
+
