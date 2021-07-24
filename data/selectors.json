@@ -1,4 +1,82 @@
 {
-  "login": {
+  "mainPage": {
+    "globalLogo": ".global-logo",
+    "lang": "#link-lang",
+    "location": "#link-locator",
+    "support": "#link-customer",
+    "informedDelivery": "#link-myusps",
+    "loginRegister": "#login-register-header",
+    "feedback": "#kampyleButtonContainer"
+  },
 
+  "navigation": {
+    "quickTools": ".nav-first-element",
+    "send": "#mail-ship-width",
+    "receive": "//a[@href = 'https://www.usps.com/manage/']",
+    "shop": "//a[@href = 'https://store.usps.com/store']",
+    "business": "//a[@href = 'https://www.usps.com/business/']",
+    "international": "//a[@href = 'https://www.usps.com/international/']",
+    "help": "//a[@href = 'https://faq.usps.com/s/']",
+    "search": ".nav-search"
+  },
+
+  "signInSignUp": {
+    "quickTools": "#usps-logo",
+    "h1": "#sign-in-to-your-account-header",
+    "h3": "//h3[contains(text(), 'Already have an account?')]",
+    "h3New" : "//h3[contains(text(), 'New to USPS.com?')]",
+    "signUpBtn": "#sign-up-button",
+    "signInBtn": "##btn-submit",
+    "forgotUserName": "#forgot-username-link",
+    "forgotPassword": "#forgot-password-link",
+    "backLink": "#link-back",
+    "langMenu": "#client-nav",
+    "custServ": "//a[@href='https://www.usps.com/help/welcome.htm']",
+    "mobile": "//a[@href='https://www.usps.com/mobile/info.htm']"
+
+  },
+  "newUser": {
+    "createAcc": "//h1[text()='Create Your USPS.com Account']",
+    "lblLang": "for-slanguage",
+    "selectLang": "#slanguage",
+    "lblUsername": "#for-tuserName",
+    "usernameIF": "#tuserName",
+    "passwordLbl": "#for-tPassword",
+    "passwordIF": "#tPassword",
+    "retypePasswordLbl": "#for-tPasswordRetype",
+    "retypePasswordIF": "#tPasswordRetype",
+    "secQuest1": "#ssec1",
+    "secQuest2": "#ssec2",
+    "secAnsw1IF": "#tsecAnswer1",
+    "secAnsw2IF": "#tsecAnswer2",
+    "retypeAnsw1IF": "#tsecAnswer1Match",
+    "retypeAnsw2IF": "#tsecAnswer2Match",
+    "persRadioBtn": "#rAccount1",
+    "buisnRadioBtn": "#rAccount2",
+    "selectTitle": "#stitle",
+    "firstNameIF": "#tfName",
+    "mIIF": "#tmI",
+    "lasNameIF": "#tlName",
+    "selectSuffix": "#ssuffix",
+    "emailIF": "#temail",
+    "retypeEmailIF": "#temailRetype",
+    "phoneType": "temailRetype",
+    "phoneIF": "#tphone",
+    "extIF": "#tphone",
+    "mobileIF": "#tmobile",
+    "chekBox1": "#cFrmUSPS",
+    "chekBox2": "#cFrmPartners",
+    "selectCountry": "#scountry",
+    "addressIF": "#taddress",
+    "address2IF": "#tapt",
+    "cityIF": "#tcity",
+    "selectState": "#sstate",
+    "zipCodeIF": "#tzip",
+    "verifyBtn": "#a-address-step1",
+    "origAddressRadioBtn": "#ams-same",
+    "backBtn": "#a-address-step2-prev",
+    "contBtn": "#a-address-step2",
+    "changeAdrBtn": "#a-address-step6-prev",
+    "createAccBtn": "#btn-submit"
   }
+}

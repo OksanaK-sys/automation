@@ -1,4 +1,9 @@
 {
-  "userLogin": {
+  "userSignUp": {
+    "userName": "iAmNewUser",
+    "password": "Password!1",
+    "answer1": "Earth",
+    "answer2": "Dog"
+  }
 
   }
