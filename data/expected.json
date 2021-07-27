@@ -1,7 +1,10 @@
 {
   "titleName": "Welcome | USPS",
   "signUp": {
-    "language": "English"
+    "language": "English",
+    "secQuestion4": "What is your favorite holiday?",
+    "secQuestion2_5": "What is your favorite movie?",
+    "secAnswerMessage": "Your secret answers do not match."
   }
 }
 

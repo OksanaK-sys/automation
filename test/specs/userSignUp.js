@@ -46,10 +46,23 @@ describe('USER SIGNUP', () => {
     it('07/SUP Should verify Passwords IFs accept valid data',  () => {
         $(selectors.newUser.passwordIF)
             .setValue(testData.userSignUp.password);
-        browser.pause(3000);
         $(selectors.newUser.retypePasswordIF)
             .setValue(testData.userSignUp.password);
+        expect($(selectors.newUser.passwordSuccessMessage).isDisplayed()).true;
+    });
+    it('08/SUP Should select security question 1',  () => {
+        $(selectors.newUser.secQuestion1_4)
+            .scrollIntoView();
+        $(selectors.newUser.secQuestion1_4).click();
+        expect($(selectors.newUser.secQuestion1_4).getText())
+            .to.equal(expected.signUp.secQuestion4);
+    });
+    it('09/SUP Should set security answer 1',  () => {
+        $(selectors.newUser.secAnsw1IF).setValue(testData.userSignUp.answer1);
+        $(selectors.newUser.retypeAnsw1IF).setValue(testData.userSignUp.answer1);
+        expect($(selectors.newUser.errorMessageAnsw1).isDisplayed()).false;
     });
 });
+
 
 
