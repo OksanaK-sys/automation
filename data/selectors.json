@@ -41,6 +41,8 @@
     "selectLang": "#slanguage",
     "lblUsername": "#for-tuserName",
     "usernameIF": "#tuserName",
+    "availableMessage": "#//strong[text()='Available!']",
+    "usernameErrorMessage": "#sr-only-error-tuserName",
     "passwordLbl": "#for-tPassword",
     "passwordIF": "#tPassword",
     "retypePasswordLbl": "#for-tPasswordRetype",
@@ -77,6 +79,8 @@
     "backBtn": "#a-address-step2-prev",
     "contBtn": "#a-address-step2",
     "changeAdrBtn": "#a-address-step6-prev",
-    "createAccBtn": "#btn-submit"
+    "createAccBtn": "#btn-submit",
+    "passwordErrorMessage": "#error-tPassword",
+    "passwordRetypeErrorMessage": "#error-tPasswordRetype"
   }
 }

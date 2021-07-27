@@ -37,13 +37,19 @@ describe('USER SIGNUP', () => {
     it('06/SUP Should verify Username IF accepts valid data',  () => {
         $(selectors.newUser.usernameIF)
                 .setValue(testData.userSignUp.userName);
+        // $(selectors.newUser.usernameIF)
+        //     .setValue(testData.userSignUp.wrongUserName);
         expect($(selectors.newUser.usernameIF)
             .getValue() === testData.userSignUp.userName);
-        expect($(expected.signUp.userNameErrorMessage).isDisplayed()).false;
+        expect($(selectors.newUser.usernameErrorMessage).isDisplayed()).true;//false
     });
     it('07/SUP Should verify Passwords IFs accept valid data',  () => {
         $(selectors.newUser.passwordIF)
             .setValue(testData.userSignUp.password);
+        browser.pause(3000);
+        $(selectors.newUser.retypePasswordIF)
+            .setValue(testData.userSignUp.password);
     });
 });
+
 

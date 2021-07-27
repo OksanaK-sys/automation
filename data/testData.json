@@ -1,7 +1,10 @@
 {
   "userSignUp": {
     "userName": "iAmNewUser",
+    "wrongUserName": "USA",
     "password": "Password!1",
+    "wrongPassword": "passw",
+    "wrongPassword2": "passwr",
     "answer1": "Earth",
     "answer2": "Dog"
   }

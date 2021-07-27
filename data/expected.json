@@ -1,8 +1,6 @@
 {
   "titleName": "Welcome | USPS",
   "signUp": {
-    "availableMessage": "#//strong[text()='Available!']",
-    "userNameErrorMessage": ".error-txt-blk",
     "language": "English"
   }
 }
