@@ -29,10 +29,10 @@ describe('USER SIGNUP', () => {
         expect($(selectors.newUser.createAcc).isDisplayed()).true;
     });
     it('05/SUP User should be able select language',  () => {
-        $(selectors.newUser.selectLang).click();
-        $(selectors.newUser.selectLang).click();
+        $(selectors.newUser.selectLang).selectByVisibleText('English');
+        // expect($(selectors.newUser.selectLang).isSelected()).to.equal(true);
         expect($(selectors.newUser.selectLang)
-                .getValue() === expected.signUp.language);
+                .getText() === expected.signUp.language);
     });
     it('06/SUP Should verify Username IF accepts valid data',  () => {
         $(selectors.newUser.usernameIF)
@@ -51,18 +51,38 @@ describe('USER SIGNUP', () => {
         expect($(selectors.newUser.passwordSuccessMessage).isDisplayed()).true;
     });
     it('08/SUP Should select security question 1',  () => {
-        $(selectors.newUser.secQuestion1_4)
-            .scrollIntoView();
-        $(selectors.newUser.secQuestion1_4).click();
-        expect($(selectors.newUser.secQuestion1_4).getText())
-            .to.equal(expected.signUp.secQuestion4);
+        $(selectors.newUser.secQuest1).selectByVisibleText(expected.signUp.secQuestion4);
+        expect($(selectors.newUser.secQuestion1_4).isSelected()).to.equal(true);
     });
     it('09/SUP Should set security answer 1',  () => {
         $(selectors.newUser.secAnsw1IF).setValue(testData.userSignUp.answer1);
         $(selectors.newUser.retypeAnsw1IF).setValue(testData.userSignUp.answer1);
         expect($(selectors.newUser.errorMessageAnsw1).isDisplayed()).false;
     });
+    it('10/SUP Should select security question 2',  () => {
+        $(selectors.newUser.secQuest2).selectByVisibleText(expected.signUp.secQuestion2_5);
+        expect($(selectors.newUser.secQuestion25).isSelected()).to.equal(true);
+    });
+    it('11/SUP Should set security answer 2',  () => {
+        $(selectors.newUser.secAnsw2IF).setValue(testData.userSignUp.answer2);
+        $(selectors.newUser.retypeAnsw2IF).setValue(testData.userSignUp.answer2);
+        expect($(selectors.newUser.errorMessageAnsw2).isDisplayed()).false;
+    });
+    it('12/SUP Should select type of account',  () => {
+        $(selectors.newUser.persRadioBtn).click();
+        expect($(selectors.newUser.persRadioBtn).isSelected()).to.equal(true);
+    });
+    it('13/SUP Should select Title',  () => {
+        $(selectors.newUser.selectTitle).selectByVisibleText(testData.userSignUp.title);
+        expect($(selectors.newUser.selectedTitle).isSelected()).to.equal(true);
+    });
+    it('14/SUP Should verify FirstName IF accepts valid data',  () => {
+        $(selectors.newUser.firstNameIF).setValue(testData.userSignUp.firstName);
+        expect($(selectors.newUser.firstNameErrorMessage).isDisplayed()).false;
+        browser.pause(5000);
+    });
 });
+
 
 
 
