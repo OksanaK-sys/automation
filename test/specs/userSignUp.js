@@ -79,8 +79,37 @@ describe('USER SIGNUP', () => {
     it('14/SUP Should verify FirstName IF accepts valid data',  () => {
         $(selectors.newUser.firstNameIF).setValue(testData.userSignUp.firstName);
         expect($(selectors.newUser.firstNameErrorMessage).isDisplayed()).false;
+    });
+    it('15/SUP Should verify MI IF accepts valid data',  () => {
+        $(selectors.newUser.mIIF).setValue(testData.userSignUp.emptyString);
+        expect($(selectors.newUser.mIErrorMessage).isDisplayed()).false;
+    });
+    it('16/SUP Should verify LastName IF accepts valid data',  () => {
+        $(selectors.newUser.lasNameIF).setValue(testData.userSignUp.lastName);
+        expect($(selectors.newUser.lastNameErrorMessage).isDisplayed()).false;
+    });
+    it('17/SUP Should select suffix',  () => {
+        $(selectors.newUser.selectSuffix).selectByVisibleText(testData.userSignUp.suffix);
+        expect($(selectors.newUser.selectedSuffix).isSelected()).to.equal(true);
+    });
+    it('18/SUP Should verify email IFs accepts valid data',  () => {
+        $(selectors.newUser.emailIF).setValue(testData.userSignUp.email);
+        $(selectors.newUser.retypeEmailIF).setValue(testData.userSignUp.email);
+        expect($(selectors.newUser.emailErrorMessage).isDisplayed()).false;
+    });
+    it('19/SUP Should select type of phone number',  () => {
+        $(selectors.newUser.phoneType).selectByVisibleText(testData.userSignUp.phoneType);
+        expect($(selectors.newUser.selectedPhoneType).isSelected()).to.equal(true);
+    });
+    it('20/SUP Should verify phone IF accepts valid data',  () => {
+        $(selectors.newUser.phoneIF).setValue(testData.userSignUp.phone);
+        $(selectors.newUser.extIF).click();
+        expect($(selectors.newUser.errorPhone).isDisplayed()).false;
         browser.pause(5000);
     });
+
+
+
 });
 
 
