@@ -9,7 +9,12 @@
     "answer2": "Dog",
     "title": "Miss",
     "firstName": "Nadezhda",
-    "lastName": "Nadezhdova"
+    "lastName": "Nadezhdova",
+    "emptyString": "",
+    "suffix": "Jr",
+    "email": "nan@yahoo.com",
+    "phoneType": "US",
+    "phone": "4082222222"
   }
 
   }
