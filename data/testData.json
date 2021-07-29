@@ -14,7 +14,12 @@
     "suffix": "Jr",
     "email": "nan@yahoo.com",
     "phoneType": "US",
-    "phone": "4082222222"
+    "phone": "4082222222",
+    "country": "UNITED STATES",
+    "streetAddress": "795 E DRAGRAM",
+    "city": "TUCSON",
+    "state": "AZ - Arizona",
+    "zipCode": "85705"
+    }
   }
 
-  }
