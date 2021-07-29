@@ -1,6 +1,5 @@
 import { expect } from "chai";
 import expected from './../../data/expected.json';
-import { userLogin } from "../../helper/methods";
 import testData from "../../data/testData.json";
 import selectors from "../../data/selectors.json";
 
@@ -105,12 +104,33 @@ describe('USER SIGNUP', () => {
         $(selectors.newUser.phoneIF).setValue(testData.userSignUp.phone);
         $(selectors.newUser.extIF).click();
         expect($(selectors.newUser.errorPhone).isDisplayed()).false;
-        browser.pause(5000);
     });
-
-
-
+    it('21/SUP Should verify mobile IF accepts valid data',  () => {
+        $(selectors.newUser.mobileIF).setValue(testData.userSignUp.emptyString);
+        $(selectors.newUser.extIF).click();
+        expect($(selectors.newUser.mobileError).isDisplayed()).false;
+    });
+    it('22/SUP Should select type of communication',  () => {
+        $(selectors.newUser.checkBox1).click();
+        expect($(selectors.newUser.checkBox1).isSelected()).to.equal(true);
+        expect($(selectors.newUser.checkBox2).isSelected()).to.equal(false);
+    });
+    it('23/SUP Should select country',  () => {
+        $(selectors.newUser.selectCountry).selectByVisibleText(testData.userSignUp.country);
+        expect($(selectors.newUser.selectedCountry).isSelected()).to.equal(true);
+    });
+    it('24/SUP Should verify address IF accepts valid data',  () => {
+        $(selectors.newUser.addressIF).setValue(testData.userSignUp.streetAddress);
+        $(selectors.newUser.address2IF).click();
+        expect($(selectors.newUser.errorAddress).isDisplayed()).false;
+    });
+    it('25/SUP Should verify Apt/Suite/Other IF accepts valid data',  () => {
+        $(selectors.newUser.address2IF).setValue(testData.userSignUp.emptyString);
+        $(selectors.newUser.cityIF).click();
+        expect($(selectors.newUser.aptError).isDisplayed()).false;
+    });
 });
+
 
 
 
