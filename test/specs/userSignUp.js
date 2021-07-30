@@ -129,7 +129,28 @@ describe('USER SIGNUP', () => {
         $(selectors.newUser.cityIF).click();
         expect($(selectors.newUser.aptError).isDisplayed()).false;
     });
+    it('26/SUP Should verify city IF accepts valid data',  () => {
+        $(selectors.newUser.cityIF).setValue(testData.userSignUp.city);
+        $(selectors.newUser.zipCodeIF).click();
+        expect($(selectors.newUser.cityError).isDisplayed()).false;
+    });
+    it('27/SUP Should select state',  () => {
+        $(selectors.newUser.selectState).selectByVisibleText(testData.userSignUp.state);
+        expect($(selectors.newUser.selectedState).isSelected()).to.equal(true);
+    });
+    it('28/SUP Should verify ZIP Code IF accepts valid data',  () => {
+        $(selectors.newUser.zipCodeIF).setValue(testData.userSignUp.zipCode);
+        $(selectors.newUser.addressSection).click();
+        expect($(selectors.newUser.zipError).isDisplayed()).false;
+    });
+    it('29/SUP Should click verify address button',  () => {
+        $(selectors.newUser.verifyBtn).click();
+        $(selectors.newUser.backBtn).waitForDisplayed();
+        expect($(selectors.newUser.backBtn).isClickable()).true;
+        expect($(selectors.newUser.origAddressRadioBtn).isClickable()).true;
+    });
 });
+
 
 
 
