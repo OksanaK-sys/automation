@@ -94,7 +94,7 @@
     "cityIF": "#tcity",
     "cityError": "#error-tcity",
     "selectState": "#sstate",
-    "selectedState": "//option[@value='AZ']",
+    "selectedState": "//option[@value='CA']",
     "zipCodeIF": "#tzip",
     "zipError": "#error-tzip",
     "verifyBtn": "#a-address-step1",
@@ -104,7 +104,9 @@
     "changeAdrBtn": "#a-address-step6-prev",
     "createAccBtn": "#btn-submit",
     "passwordErrorMessage": "#error-tPassword",
-    "passwordRetypeErrorMessage": "#error-tPasswordRetype"
+    "passwordRetypeErrorMessage": "#error-tPasswordRetype",
+    "verifiedIcon": "#ams-verified-icon",
+    "available": "//strong[contains(text(),'Available!')]"
   }
 }
 

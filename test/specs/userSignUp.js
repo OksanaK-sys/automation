@@ -38,9 +38,7 @@ describe('USER SIGNUP', () => {
                 .setValue(testData.userSignUp.userName);
         // $(selectors.newUser.usernameIF)
         //     .setValue(testData.userSignUp.wrongUserName);
-        expect($(selectors.newUser.usernameIF)
-            .getValue() === testData.userSignUp.userName);
-        expect($(selectors.newUser.usernameErrorMessage).isDisplayed()).true;//false
+        expect($(selectors.newUser.available).isDisplayed()).false;//false
     });
     it('07/SUP Should verify Passwords IFs accept valid data',  () => {
         $(selectors.newUser.passwordIF)
@@ -125,7 +123,7 @@ describe('USER SIGNUP', () => {
         expect($(selectors.newUser.errorAddress).isDisplayed()).false;
     });
     it('25/SUP Should verify Apt/Suite/Other IF accepts valid data',  () => {
-        $(selectors.newUser.address2IF).setValue(testData.userSignUp.emptyString);
+        $(selectors.newUser.address2IF).setValue(testData.userSignUp.number);
         $(selectors.newUser.cityIF).click();
         expect($(selectors.newUser.aptError).isDisplayed()).false;
     });
@@ -145,9 +143,17 @@ describe('USER SIGNUP', () => {
     });
     it('29/SUP Should click verify address button',  () => {
         $(selectors.newUser.verifyBtn).click();
-        $(selectors.newUser.backBtn).waitForDisplayed();
-        expect($(selectors.newUser.backBtn).isClickable()).true;
-        expect($(selectors.newUser.origAddressRadioBtn).isClickable()).true;
+        $(selectors.newUser.verifiedIcon).waitForDisplayed();
+        expect($(selectors.newUser.verifiedIcon).isDisplayed()).true;
+    });
+    it('30/SUP Should  verify create account button is visible and clickable',  () => {
+        $(selectors.newUser.createAccBtn).waitForDisplayed();
+        expect($(selectors.newUser.createAccBtn).isDisplayed()).true;
+        expect($(selectors.newUser.createAccBtn).isClickable()).true;
+    });
+    it('31/SUP Should  click create account button',  () => {
+        $(selectors.newUser.createAccBtn).click();
+        expect($(selectors.newUser.usernameErrorMessage).isDisplayed()).true;//false
     });
 });
 
